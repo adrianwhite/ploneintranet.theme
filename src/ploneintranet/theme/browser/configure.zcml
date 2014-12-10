@@ -94,5 +94,22 @@
       layer="..interfaces.IThemeSpecific"
       />
 
+    <browser:page
+        name="tile-renderer-example"
+        for="Products.CMFCore.interfaces.IFolderish"
+        permission="cmf.ModifyPortalContent"
+        template="templates/examples/tile-renderer-example.pt"
+        />
+
+    <plone:tile
+        name="ploneintranet.theme.exampletile"
+        title="A basic time example"
+        description="A tile containing not a lot"
+        add_permission="cmf.ModifyPortalContent"
+        class=".tile.ExampleTile"
+        permission="zope2.View"
+        template="templates/examples/example-tile.pt"
+        for="*"
+        />
 
 </configure>
